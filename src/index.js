@@ -36,15 +36,14 @@ const {
     AWS_REGION,
     AWS_S3_BUCKET,
     SESSION_SECRET,
-    SESSION_DURATION,
-    SESSION_HTTPS
+    SESSION_DURATION
 } = process.env;
 
 // Get session settings
 const maxAge = SESSION_DURATION
     ? parseInt(SESSION_DURATION, 10) * 60 * 1000
     : 120 * 60 * 1000;
-const secure = !(SESSION_HTTPS?.toLowerCase() === 'false');
+const secure = SF_AUTH_CALLBACK_URL.startsWith('https://');
 
 // Prepare server
 const app = fastify({ logger: true });
