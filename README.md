@@ -2,9 +2,11 @@
 
 ## About
 
-This project is a node app that acts as an integration between a Salesforce Org and Amazon S3. This project is completary with this integration that [exports Salesforce documents to Amazon S3](https://github.com/pozil/sf-docs-to-s3).
+This project is a node app that acts as an integration between a Salesforce Org and Amazon S3.
 
-The goal of the integration is to alow Salesforce users to download Amazon S3 documents. The integration leverages OAuth 2.0 to authenticate users and performs security checks on document access.
+The project is complementary with this integration that [exports Salesforce documents to Amazon S3](https://github.com/pozil/sf-docs-to-s3).
+
+The goal of the integration is to allow Salesforce users to download Amazon S3 documents. The integration leverages OAuth 2.0 to authenticate users and performs security checks on document access.
 
 ## Installation
 
