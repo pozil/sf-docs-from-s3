@@ -8,6 +8,14 @@ The project is complementary with this integration that [exports Salesforce docu
 
 The goal of the integration is to allow Salesforce users to download Amazon S3 documents. The integration leverages OAuth 2.0 to authenticate users and performs security checks on document access.
 
+We download documents from S3 with the following scenario:
+1. A user clicks on a link on the S3 Document record in Salesforce.
+1. The link redirects the user to the middleware app where the user goes through OAuth authentication using their Salesforce credentials. The OAuth flow is implemented thanks to a Salesforce Connected App.
+1. The middleware run some permission checks and. If the user is allowed to access the document, the middleware uses a S3 API client to retrieve the file from Amazon.
+1. The content of the file is then served back to the user. If the user was already logged in with the connected app before the original request in step 1, the document is sent seamlessly as a response (the user will not notice the intermediate steps).
+
+![Integration architecture](/doc-gfx/architecture.jpg)
+
 ## Installation
 
 ### Create a Salesforce Connected App
