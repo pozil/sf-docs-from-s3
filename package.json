@@ -21,7 +21,7 @@
         "@fastify/session": "^8.2.0",
         "dotenv": "^16.0.1",
         "fastify": "^3.29.4",
-        "jsforce": "^1.11.0"
+        "jsforce": "^1.11.1"
     },
     "devDependencies": {
         "eslint": "^8.16.0",
